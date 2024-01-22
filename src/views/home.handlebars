@@ -1,0 +1,30 @@
+<div>
+    <h1>Home handlebars</h1>
+    <h2>Products</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Title</th>
+                <th>Code</th>
+                <th>Stock</th>
+                <th>Status</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each products}}
+            <tr>
+                <td>{{id}}</td>
+                <td style="text-align: center;">{{title}}</td>
+                <td>{{code}}</td>
+                <td>{{stock}}</td>
+                <td>{{status}}</td>
+                <td>$ {{price}}</td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</div>
+<hr>
+<a href="http://localhost:4000/realtimeproducts">Real time products</a>

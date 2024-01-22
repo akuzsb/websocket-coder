@@ -1,0 +1,38 @@
+<div>
+    <h1>Real time products</h1>
+    <h2>Products</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Title</th>
+                <th>Code</th>
+                <th>Stock</th>
+                <th>Status</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody id="tbody"></tbody>
+    </table>
+<hr>
+    <h2>Product form</h2>
+    <form id="productForm">
+        <label for="title">Title</label>
+        <input type="text" id="title" name="title">
+        <label for="code">Code</label>
+        <input type="text" id="code" name="code">
+        <label for="stock">Stock</label>
+        <input type="number" id="stock" name="stock">
+        <label for="status">Status</label>
+        <select name="status">
+            <option value="true">Active</option>
+            <option value="false">Inactive
+        </select>
+        <label for="price">Price</label>
+        <input type="number" id="price" name="price">
+        <button type="submit">Save</button>
+</div>
+<hr>
+<a href="/">Home handlebars</a>
+<script src="socket.io/socket.io.js"></script>
+<script src="js/realTimeProducts.js"></script>
