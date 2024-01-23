@@ -50,13 +50,13 @@ socketServer.on('connection', async (socket) => {
     socket.on('delete', async (id) => {
         await productManager.deleteProduct(id);
         const products = await productManager.getProducts();
-        socket.emit('products', products);
+        socketServer.emit('products', products);
     });
 
     socket.on('new-product', async (product) => {
         await productManager.addProduct(product);
         const products = await productManager.getProducts();
-        socket.emit('products', products);
+        socketServer.emit('products', products);
     });
 
 });
